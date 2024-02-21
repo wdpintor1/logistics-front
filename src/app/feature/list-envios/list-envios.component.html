@@ -19,7 +19,7 @@
                <tbody *ngIf="envios">
                 <tr id="envio-list__table-item-{{i}}" *ngFor="let envio of envios; let i = index">
                    <td id="envio-list__table-item-{{i}}-email" class="text-center col">{{ envio.numeroGuia }}</td>
-                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.producto }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.producto.nombre }}</td>
                    <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.cantidadProducto }}</td>
                    <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.fechaRegistro | date: 'dd/MM/yyyy' }}</td>
                    <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.fechaEntrega | date: 'dd/MM/yyyy' }}</td>
