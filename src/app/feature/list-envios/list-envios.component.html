@@ -1,0 +1,38 @@
+   <app-nav-bar></app-nav-bar>
+   <router-outlet></router-outlet>
+   <div class="card mx-auto pb-30">
+      <div class="buscador_envios">
+         <input id="user-list__filter" type="text" class="white large shadow search-input" placeholder="Buscar envio"> 
+      </div>
+      <table id="envio-list__table" class="table envio-table">
+         <thead>
+            <tr>
+               <th class="text-center col"># Guia</th>
+               <th class="text-center col">Producto</th>
+               <th class="text-center col">Cantidad</th>
+               <th class="text-center col">Fecha registro</th>
+               <th class="text-center col">Fecha entrega</th>
+               <th class="text-center col">Precio de envio</th>
+               <th class="text-center col">Vehiculo</th>
+               <th class="text-center col">Tipo envio</th>
+               <th class="text-center col">Cliente</th>
+               <tbody *ngIf="envios">
+                <tr id="envio-list__table-item-{{i}}" *ngFor="let envio of envios; let i = index">
+                   <td id="envio-list__table-item-{{i}}-email" class="text-center col">{{ envio.numeroGuia }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.producto }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.cantidadProducto }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.fechaRegistro | date: 'dd/MM/yyyy' }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.fechaEntrega | date: 'dd/MM/yyyy' }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.precio }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.vehiculo }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.tipoEnvio }}</td>
+                   <td id="envio-list__table-item-{{i}}-first_name" class="text-center col">{{ envio.Cliente }}</td>
+                   
+                </tr>
+             </tbody>
+            </tr>
+         </thead>
+         
+         
+      </table>
+   </div>
